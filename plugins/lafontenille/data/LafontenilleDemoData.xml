@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Licensed to the Apache Software Foundation (ASF) under one
+or more contributor license agreements.  See the NOTICE file
+distributed with this work for additional information
+regarding copyright ownership.  The ASF licenses this file
+to you under the Apache License, Version 2.0 (the
+"License"); you may not use this file except in compliance
+with the License.  You may obtain a copy of the License at
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing,
+software distributed under the License is distributed on an
+"AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+KIND, either express or implied.  See the License for the
+specific language governing permissions and limitations
+under the License.
+-->
+
+<entity-engine-xml>
+
+    <!--Produit chambre -->
+    <Product productId="CHAMBRE1P" productTypeId="SERVICE" internalName="Chambre 1 personne" virtual="Y" variant="N"/>
+    <Product productId="CHORCH1P" productTypeId="SERVICE" internalName="Ch. Orchidée 1 personne" virtual="N" variant="Y"/>
+    <Product productId="CHFDC1P" productTypeId="SERVICE" internalName="Ch. Feuille de chêne 1 personne" virtual="N" variant="Y"/>
+    <Product productId="CHEDB1P" productTypeId="SERVICE" internalName="Ch. Epis de Blé 1 personne" virtual="N" variant="Y"/>
+
+    <Product productId="CHAMBRE2P" productTypeId="SERVICE" internalName="Chambre 1 personne" virtual="Y" variant="N"/>
+    <Product productId="CHORCH2P" productTypeId="SERVICE" internalName="Ch. Orchidée 2 personnes" virtual="N" variant="Y"/>
+    <Product productId="CHFDC2P" productTypeId="SERVICE" internalName="Ch. Feuille de chêne 2 personnes" virtual="N" variant="Y"/>
+    <Product productId="CHEDB2P" productTypeId="SERVICE" internalName="Ch. Epis de Blé 2 personnes" virtual="N" variant="Y"/>
+
+    <Product productId="CHADSUPP" productTypeId="SERVICE" internalName="Adulte supplémentaire" virtual="N" variant="N"/>
+    <Product productId="CHENFSUPP" productTypeId="SERVICE" internalName="Enfant supplémentaire" virtual="N" variant="N"/>
+    <Product productId="CHBEBESUPP" productTypeId="SERVICE" internalName="Bébé supplémentaire" virtual="N" variant="N"/>
+
+    <!--Produit Tax de sejour -->
+    <Product productId="TAXSEJAD" productTypeId="SERVICE" internalName="Taxe Séjour Adulte" virtual="N" variant="N"/>
+    <Product productId="TAXSEJADEXO" productTypeId="SERVICE" internalName="Taxe Séjour Adulte Exonéré" virtual="N" variant="N"/>
+    <Product productId="TAXSEJENF" productTypeId="SERVICE" internalName="Taxe Séjour Enfant" virtual="N" variant="N"/>
+
+    <!--Produit Repas -->
+    <Product productId="RPSTD" productTypeId="SERVICE" internalName="Table d'hôtes" virtual="N" variant="N"/>
+    <Product productId="RPLG" productTypeId="SERVICE" internalName="Petite table d'hôtes" virtual="N" variant="N"/>
+    <Product productId="RPSTDENF" productTypeId="SERVICE" internalName="Table d'hôtes enfant" virtual="N" variant="N"/>
+    <Product productId="RPTRU" productTypeId="SERVICE" internalName="Table d'hôtes avec truffes" virtual="N" variant="N"/>
+    <Product productId="RPVIN" productTypeId="SERVICE" internalName="Table d'hôtes vin" virtual="N" variant="N"/>
+
+    <!--Produit Divers -->
+    <!--Categorie -->
+    <ProductCategory categoryName="Fontenille Browse Root" longDescription="Racine des categories de navigation de la fontenille" productCategoryId="CATALOG_FONT" productCategoryTypeId="CATALOG_CATEGORY"/>
+    <ProductCategory categoryName="Chambres" productCategoryId="CH" productCategoryTypeId="CATALOG_CATEGORY" primaryParentCategoryId="CATALOG_FONT"/>
+    <ProductCategoryMember productCategoryId='CH' productId='CHORCH1P' fromDate='2017-01-01 00:00:00.0'/>
+    <ProductCategoryMember productCategoryId='CH' productId='CHFDC1P' fromDate='2017-01-01 00:00:00.0'/>
+    <ProductCategoryMember productCategoryId='CH' productId='CHEDB1P' fromDate='2017-01-01 00:00:00.0'/>
+    <ProductCategoryMember productCategoryId='CH' productId='CHORCH2P' fromDate='2017-01-01 00:00:00.0'/>
+    <ProductCategoryMember productCategoryId='CH' productId='CHFDC2P' fromDate='2017-01-01 00:00:00.0'/>
+    <ProductCategoryMember productCategoryId='CH' productId='CHEDB2P' fromDate='2017-01-01 00:00:00.0'/>
+    <ProductCategoryMember productCategoryId='CH' productId='CHADSUPP' fromDate='2017-01-01 00:00:00.0'/>
+    <ProductCategoryMember productCategoryId='CH' productId='CHENFSUPP' fromDate='2017-01-01 00:00:00.0'/>
+    <ProductCategoryMember productCategoryId='CH' productId='CHBEBESUPP' fromDate='2017-01-01 00:00:00.0'/>
+    <ProductCategory categoryName="Repas" productCategoryId="RP" productCategoryTypeId="CATALOG_CATEGORY" primaryParentCategoryId="CATALOG_FONT"/>
+    <ProductCategoryMember productCategoryId='RP' productId='RPSTD' fromDate='2017-01-01 00:00:00.0'/>
+    <ProductCategoryMember productCategoryId='RP' productId='RPLG' fromDate='2017-01-01 00:00:00.0'/>
+    <ProductCategoryMember productCategoryId='RP' productId='RPSTDENF' fromDate='2017-01-01 00:00:00.0'/>
+    <ProductCategoryMember productCategoryId='RP' productId='RPTRU' fromDate='2017-01-01 00:00:00.0'/>
+    <ProductCategoryMember productCategoryId='RP' productId='RPVIN' fromDate='2017-01-01 00:00:00.0'/>
+    <ProductCategory categoryName="Alimentaire" productCategoryId="ALIM" productCategoryTypeId="CATALOG_CATEGORY" primaryParentCategoryId="CATALOG_FONT"/>
+    <ProductCategoryMember productCategoryId='ALIM' productId='' fromDate='2017-01-01 00:00:00.0'/>
+    <ProductCategoryMember productCategoryId='ALIM' productId='' fromDate='2017-01-01 00:00:00.0'/>
+    <ProductCategoryMember productCategoryId='ALIM' productId='' fromDate='2017-01-01 00:00:00.0'/>
+    <ProductCategoryMember productCategoryId='ALIM' productId='' fromDate='2017-01-01 00:00:00.0'/>
+    <ProductCategoryMember productCategoryId='ALIM' productId='' fromDate='2017-01-01 00:00:00.0'/>
+    <ProductCategoryMember productCategoryId='ALIM' productId='' fromDate='2017-01-01 00:00:00.0'/>
+    <ProductCategory categoryName="Alimentaire" productCategoryId="ALIM" productCategoryTypeId="CATALOG_CATEGORY" primaryParentCategoryId="CATALOG_FONT"/>
+    <ProductCategory categoryName="Vin" productCategoryId="ALCH" productCategoryTypeId="CATALOG_CATEGORY" primaryParentCategoryId="ALIM"/>
+    <ProductCategory categoryName="Naturel" productCategoryId="ALNAT" productCategoryTypeId="CATALOG_CATEGORY" primaryParentCategoryId="ALIM"/>
+    <ProductCategoryMember productCategoryId='ALIM' productId='' fromDate='2017-01-01 00:00:00.0'/>
+    <ProductCategory categoryName="Taxe séjour" productCategoryId="TAXSEJ" productCategoryTypeId="CATALOG_CATEGORY" primaryParentCategoryId="CATALOG_FONT"/>
+    <ProductCategoryMember productCategoryId='TAXSEJ' productId='TAXSEJAD' fromDate='2017-01-01 00:00:00.0'/>
+    <ProductCategoryMember productCategoryId='TAXSEJ' productId='TAXSEJADEXO' fromDate='2017-01-01 00:00:00.0'/>
+    <ProductCategoryMember productCategoryId='TAXSEJ' productId='TAXSEJENF' fromDate='2017-01-01 00:00:00.0'/>
+
+    <ProductCategory categoryName="Taxe France" longDescription="Taxe France" productCategoryId="TAXFR" productCategoryTypeId="CATALOG_CATEGORY"/>
+    <ProductCategory categoryName="20%" productCategoryId="TVA20" productCategoryTypeId="CATALOG_CATEGORY" primaryParentCategoryId="TAXFR"/>
+    <ProductCategoryMember productCategoryId='TVA20' productId='RPVIN' fromDate='2017-01-01 00:00:00.0'/>
+    <ProductCategory categoryName="10%" productCategoryId="TVA10" productCategoryTypeId="CATALOG_CATEGORY" primaryParentCategoryId="TAXFR"/>
+    <ProductCategoryMember productCategoryId='TVA10' productId='RPTRU' fromDate='2017-01-01 00:00:00.0'/>
+    <ProductCategoryMember productCategoryId='TVA10' productId='RPSTDENF' fromDate='2017-01-01 00:00:00.0'/>
+    <ProductCategoryMember productCategoryId='TVA10' productId='RPSTD' fromDate='2017-01-01 00:00:00.0'/>
+    <ProductCategoryMember productCategoryId='TVA10' productId='RPLG' fromDate='2017-01-01 00:00:00.0'/>
+
+    <ProductCategory categoryName="5,5%" productCategoryId="TVA55" productCategoryTypeId="CATALOG_CATEGORY" primaryParentCategoryId="TAXFR"/>
+
+    <!--TVA-->
+    <!-- Tax configuration -->
+    <Party partyId="TRESOR_PUBLIC_FR" partyTypeId="PARTY_GROUP" preferredCurrencyUomId="EUR" statusId="PARTY_ENABLED" />
+    <PartyGroup groupName="Trésor Public Français" partyId="TRESOR_PUBLIC_FR"/>
+    <PartyRole partyId="TRESOR_PUBLIC_FR" roleTypeId="TAX_AUTHORITY"/>
+    <TaxAuthority includeTaxInPrice="Y" requireTaxIdForExemption="Y" taxAuthGeoId="FRA" taxAuthPartyId="TRESOR_PUBLIC_FR"/>
+    <TaxAuthorityCategory productCategoryId="CH" taxAuthGeoId="FRA" taxAuthPartyId="TRESOR_PUBLIC_FR"/>
+    <TaxAuthorityCategory productCategoryId="ALCH" taxAuthGeoId="FRA" taxAuthPartyId="TRESOR_PUBLIC_FR"/>
+    <TaxAuthorityCategory productCategoryId="ALNAT" taxAuthGeoId="FRA" taxAuthPartyId="TRESOR_PUBLIC_FR"/>
+    <TaxAuthorityCategory productCategoryId="TVA20" taxAuthGeoId="FRA" taxAuthPartyId="TRESOR_PUBLIC_FR"/>
+    <TaxAuthorityCategory productCategoryId="TVA10" taxAuthGeoId="FRA" taxAuthPartyId="TRESOR_PUBLIC_FR"/>
+    <TaxAuthorityCategory productCategoryId="TVA55" taxAuthGeoId="FRA" taxAuthPartyId="TRESOR_PUBLIC_FR"/>
+    <TaxAuthorityRateProduct productCategoryId="CH" productStoreId="EMBI_FR_TAG" taxAuthGeoId="FRA" taxAuthPartyId="TRESOR_PUBLIC_FR" taxAuthorityRateSeqId="FR_TVA_1" taxAuthorityRateTypeId="SALES_TAX" taxPercentage="20" taxPromotions="Y" taxShipping="Y"/>
+    <TaxAuthorityRateProduct productCategoryId="ALCH" productStoreId="EMBI_FR_TAG" taxAuthGeoId="FRA" taxAuthPartyId="TRESOR_PUBLIC_FR" taxAuthorityRateSeqId="FR_TVA_11" taxAuthorityRateTypeId="SALES_TAX" taxPercentage="20" taxPromotions="Y" taxShipping="Y"/>
+    <TaxAuthorityRateProduct productCategoryId="TVA20" productStoreId="EMBI_FR_TAG" taxAuthGeoId="FRA" taxAuthPartyId="TRESOR_PUBLIC_FR" taxAuthorityRateSeqId="FR_TVA_12" taxAuthorityRateTypeId="SALES_TAX" taxPercentage="20" taxPromotions="Y" taxShipping="Y"/>
+    <TaxAuthorityRateProduct productCategoryId="TVA10" productStoreId="EMBI_FR_TAG" taxAuthGeoId="FRA" taxAuthPartyId="TRESOR_PUBLIC_FR" taxAuthorityRateSeqId="FR_TVA_2" taxAuthorityRateTypeId="SALES_TAX" taxPercentage="10" taxPromotions="Y" taxShipping="Y"/>
+    <TaxAuthorityRateProduct productCategoryId="TVA55" productStoreId="EMBI_FR_TAG" taxAuthGeoId="FRA" taxAuthPartyId="TRESOR_PUBLIC_FR" taxAuthorityRateSeqId="FR_TVA_3" taxAuthorityRateTypeId="SALES_TAX" taxPercentage="5.5" taxPromotions="Y" taxShipping="Y"/>
+    <TaxAuthorityRateProduct productCategoryId="ALNAT" productStoreId="EMBI_FR_TAG" taxAuthGeoId="FRA" taxAuthPartyId="TRESOR_PUBLIC_FR" taxAuthorityRateSeqId="FR_TVA_3" taxAuthorityRateTypeId="SALES_TAX" taxPercentage="5.5" taxPromotions="Y" taxShipping="Y"/>
+
+    <ProdCatalog prodCatalogId="CATALOG_FONT" catalogName="Fontenille" useQuickAdd="Y"/>
+    <ProductStoreCatalog productStoreId="FONTENILLE" prodCatalogId="CATALOG_FONT" fromDate="2017-01-01 12:00:00.0" sequenceNum="1"/>
+    <ProdCatalogCategory prodCatalogCategoryTypeId="PCCT_BROWSE_ROOT" prodCatalogId="CATALOG_FONT" productCategoryId="CATALOG_FONT" fromDate="2017-01-01 00:00:00.0" sequenceNum="2"/>
+
+    <Party partyId="FONTENILLE" partyTypeId="PARTY_GROUP" preferredCurrencyUomId="EUR" statusId="PARTY_ENABLED" />
+    <PartyGroup groupName="SARL la Fontenille" partyId="FONTENILLE"/>
+    <PartyRole roleTypeId="INTERNAL_ORGANIZATIO" partyId="FONTENILLE"/>
+    <Facility facilityId="FONT_LAPAN" facilityTypeId="OFFICE" facilityName="Chambre Lapan" description="" ownerPartyId="FONTENILLE" defaultInventoryItemTypeId="NON_SERIAL_INV_ITEM" defaultWeightUomId="" defaultDaysToShip="5" />
+
+    <ProductStore productStoreId="FONTENILLE" storeName="Fontenille" companyName="" title=""
+        subtitle="" payToPartyId="FONTENILLE" prorateShipping="N" prorateTaxes="Y" isDemoStore="N" requirementMethodEnumId="PRODRQM_DS"
+        addToCartReplaceUpsell="N" addToCartRemoveIncompat="N" orderDecimalQuantity="N" splitPayPrefPerShpGrp="N"
+        vatTaxAuthGeoId="FRA" vatTaxAuthPartyId="TRESOR_PUBLIC_FR" orderNumberPrefix="FONT"
+        inventoryFacilityId="FONT_LAPAN" oneInventoryFacility="N" checkInventory="N" reserveInventory="N" balanceResOnOrderCreation="N" reserveOrderEnumId="" requireInventory="N"
+        defaultLocaleString="fr_FR" defaultCurrencyUomId="EUR" defaultSalesChannelEnumId="" allowPassword="Y" explodeOrderItems="N" retryFailedAuths="Y" reqReturnInventoryReceive="N"
+        headerApprovedStatus="ORDER_APPROVED" itemApprovedStatus="ITEM_APPROVED" digitalItemApprovedStatus="ITEM_APPROVED" headerDeclinedStatus="ORDER_REJECTED"
+        itemDeclinedStatus="ITEM_REJECTED" headerCancelStatus="ORDER_CANCELLED" itemCancelStatus="ITEM_CANCELLED"
+        visualThemeId="EC_DEFAULT" prodSearchExcludeVariants="Y" autoApproveInvoice="Y" autoApproveOrder="Y" showOutOfStockProducts="Y"/>
+    <ProductStorePaymentSetting productStoreId="FONTENILLE" paymentMethodTypeId="EFT_ACCOUNT" paymentServiceTypeEnumId="PRDS_PAY_AUTH" paymentService="alwaysApproveEFTProcessor" paymentCustomMethodId="EFT_AUTH_ALWAYSAPPRO"/>
+    <ProductStoreFacility productStoreId="FONTENILLE" facilityId="FONT_LAPAN" fromDate="2017-01-01 12:00:00.0" sequenceNum="1"/>
+
+</entity-engine-xml>
