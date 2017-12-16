@@ -21,40 +21,44 @@ under the License.
 <entity-engine-xml>
 
     <!--Produit chambre -->
-    <Product productId="CHAMBRE1P" productTypeId="SERVICE" internalName="Chambre 1 personne" virtual="Y" variant="N"/>
-    <Product productId="CHORCH1P" productTypeId="SERVICE" internalName="Ch. Orchidée 1 personne" virtual="N" variant="Y"/>
+    <Product productId="CHAMBRE1P" productTypeId="SERVICE" internalName="Chambre 1 personne" isVirtual="Y" isVariant="N"/>
+    <Product productId="CHORCH1P" productTypeId="SERVICE" internalName="Ch. Orchidée 1 personne" isVirtual="N" isVariant="Y"/>
     <ProductAssoc fromDate="2017-01-01 12:00:00.0" productAssocTypeId="PRODUCT_VARIANT" productId="CHAMBRE1P" productIdTo="CHORCH1P" quantity="1.0" reason=""/>
-    <Product productId="CHFDC1P" productTypeId="SERVICE" internalName="Ch. Feuille de chêne 1 personne" virtual="N" variant="Y"/>
+    <Product productId="CHFDC1P" productTypeId="SERVICE" internalName="Ch. Feuille de chêne 1 personne" isVirtual="N" isVariant="Y"/>
     <ProductAssoc fromDate="2017-01-01 12:00:00.0" productAssocTypeId="PRODUCT_VARIANT" productId="CHAMBRE1P" productIdTo="CHFDC1P" quantity="1.0" reason=""/>
-    <Product productId="CHEDB1P" productTypeId="SERVICE" internalName="Ch. Epis de Blé 1 personne" virtual="N" variant="Y"/>
+    <Product productId="CHEDB1P" productTypeId="SERVICE" internalName="Ch. Epis de Blé 1 personne" isVirtual="N" isVariant="Y"/>
     <ProductAssoc fromDate="2017-01-01 12:00:00.0" productAssocTypeId="PRODUCT_VARIANT" productId="CHAMBRE1P" productIdTo="CHEDB1P" quantity="1.0" reason=""/>
 
-    <Product productId="CHAMBRE2P" productTypeId="SERVICE" internalName="Chambre 1 personne" virtual="Y" variant="N"/>
-    <Product productId="CHORCH2P" productTypeId="SERVICE" internalName="Ch. Orchidée 2 personnes" virtual="N" variant="Y"/>
+    <Product productId="CHAMBRE2P" productTypeId="SERVICE" internalName="Chambre 1 personne" isVirtual="Y" isVariant="N"/>
+    <Product productId="CHORCH2P" productTypeId="SERVICE" internalName="Ch. Orchidée 2 personnes" isVirtual="N" isVariant="Y"/>
     <ProductAssoc fromDate="2017-01-01 12:00:00.0" productAssocTypeId="PRODUCT_VARIANT" productId="CHAMBRE2P" productIdTo="CHORCH2P" quantity="1.0" reason=""/>
-    <Product productId="CHFDC2P" productTypeId="SERVICE" internalName="Ch. Feuille de chêne 2 personnes" virtual="N" variant="Y"/>
+    <Product productId="CHFDC2P" productTypeId="SERVICE" internalName="Ch. Feuille de chêne 2 personnes" isVirtual="N" isVariant="Y"/>
     <ProductAssoc fromDate="2017-01-01 12:00:00.0" productAssocTypeId="PRODUCT_VARIANT" productId="CHAMBRE2P" productIdTo="CHFDC2P" quantity="1.0" reason=""/>
-    <Product productId="CHEDB2P" productTypeId="SERVICE" internalName="Ch. Epis de Blé 2 personnes" virtual="N" variant="Y"/>
+    <Product productId="CHEDB2P" productTypeId="SERVICE" internalName="Ch. Epis de Blé 2 personnes" isVirtual="N" isVariant="Y"/>
     <ProductAssoc fromDate="2017-01-01 12:00:00.0" productAssocTypeId="PRODUCT_VARIANT" productId="CHAMBRE2P" productIdTo="CHEDB2P" quantity="1.0" reason=""/>
 
-    <Product productId="CHADSUPP" productTypeId="SERVICE" internalName="Adulte supplémentaire" virtual="N" variant="N"/>
-    <Product productId="CHENFSUPP" productTypeId="SERVICE" internalName="Enfant supplémentaire" virtual="N" variant="N"/>
-    <Product productId="CHBEBESUPP" productTypeId="SERVICE" internalName="Bébé supplémentaire" virtual="N" variant="N"/>
+    <Product productId="CHADSUPP" productTypeId="SERVICE" internalName="Adulte supplémentaire" isVirtual="N" isVariant="N"/>
+    <Product productId="CHENFSUPP" productTypeId="SERVICE" internalName="Enfant supplémentaire" isVirtual="N" isVariant="N"/>
+    <Product productId="CHBEBESUPP" productTypeId="SERVICE" internalName="Bébé supplémentaire" isVirtual="N" isVariant="N"/>
 
     <!--Produit Tax de sejour -->
-    <Product productId="TAXSEJAD" productTypeId="SERVICE" internalName="Taxe Séjour Adulte" virtual="N" variant="N"/>
-    <Product productId="TAXSEJADEXO" productTypeId="SERVICE" internalName="Taxe Séjour Adulte Exonéré" virtual="N" variant="N"/>
-    <Product productId="TAXSEJENF" productTypeId="SERVICE" internalName="Taxe Séjour Enfant" virtual="N" variant="N"/>
+    <Product productId="TAXSEJAD" productTypeId="SERVICE" internalName="Taxe Séjour Adulte" isVirtual="N" isVariant="N"/>
+    <Product productId="TAXSEJADEXO" productTypeId="SERVICE" internalName="Taxe Séjour Adulte Exonéré" isVirtual="N" isVariant="N"/>
+    <Product productId="TAXSEJENF" productTypeId="SERVICE" internalName="Taxe Séjour Enfant" isVirtual="N" isVariant="N"/>
 
     <!--Produit Repas -->
-    <Product productId="RPSTD" productTypeId="SERVICE" internalName="Table d'hôtes" virtual="N" variant="N"/>
-    <Product productId="RPLG" productTypeId="SERVICE" internalName="Petite table d'hôtes" virtual="N" variant="N"/>
-    <Product productId="RPSTDENF" productTypeId="SERVICE" internalName="Table d'hôtes enfant" virtual="N" variant="N"/>
-    <Product productId="RPTRU" productTypeId="SERVICE" internalName="Table d'hôtes avec truffes" virtual="N" variant="N"/>
-    <Product productId="RPVIN" productTypeId="SERVICE" internalName="Table d'hôtes vin" virtual="N" variant="N"/>
+    <Product productId="RPSTD" productTypeId="SERVICE" internalName="Table d'hôtes" isVirtual="N" isVariant="N"/>
+    <Product productId="RPLG" productTypeId="SERVICE" internalName="Petite table d'hôtes" isVirtual="N" isVariant="N"/>
+    <Product productId="RPSTDENF" productTypeId="SERVICE" internalName="Table d'hôtes enfant" isVirtual="N" isVariant="N"/>
+    <Product productId="RPTRU" productTypeId="SERVICE" internalName="Table d'hôtes avec truffes" isVirtual="N" isVariant="N"/>
+    <Product productId="RPVIN" productTypeId="SERVICE" internalName="Table d'hôtes vin" isVirtual="N" isVariant="N"/>
 
     <!--Produit Divers -->
-    <Product productId="" productTypeId="SERVICE" internalName="Table d'hôtes vin" virtual="N" variant="N"/>
+    <Product productId="FARINE" productTypeId="SERVICE" internalName="Farine d'houdon" isVirtual="N" isVariant="N"/>
+    <Product productId="NOIX" productTypeId="SERVICE" internalName="Sac de noix" isVirtual="N" isVariant="N"/>
+    <Product productId="MIEL" productTypeId="SERVICE" internalName="Pot de miel" isVirtual="N" isVariant="N"/>
+    <Product productId="VIN" productTypeId="SERVICE" internalName="Vin de vesnems" isVirtual="N" isVariant="N"/>
+    <Product productId="TRUFFE" productTypeId="SERVICE" internalName="Truffe" isVirtual="N" isVariant="N"/>
 
 
     <!--Categorie -->
@@ -76,33 +80,37 @@ under the License.
     <ProductCategoryMember productCategoryId='RP' productId='RPTRU' fromDate='2017-01-01 00:00:00.0'/>
     <ProductCategoryMember productCategoryId='RP' productId='RPVIN' fromDate='2017-01-01 00:00:00.0'/>
     <ProductCategory categoryName="Alimentaire" productCategoryId="ALIM" productCategoryTypeId="CATALOG_CATEGORY" primaryParentCategoryId="CATALOG_FONT"/>
-    <ProductCategoryMember productCategoryId='ALIM' productId='' fromDate='2017-01-01 00:00:00.0'/>
-    <ProductCategoryMember productCategoryId='ALIM' productId='' fromDate='2017-01-01 00:00:00.0'/>
-    <ProductCategoryMember productCategoryId='ALIM' productId='' fromDate='2017-01-01 00:00:00.0'/>
-    <ProductCategoryMember productCategoryId='ALIM' productId='' fromDate='2017-01-01 00:00:00.0'/>
-    <ProductCategoryMember productCategoryId='ALIM' productId='' fromDate='2017-01-01 00:00:00.0'/>
-    <ProductCategoryMember productCategoryId='ALIM' productId='' fromDate='2017-01-01 00:00:00.0'/>
     <ProductCategory categoryName="Alimentaire" productCategoryId="ALIM" productCategoryTypeId="CATALOG_CATEGORY" primaryParentCategoryId="CATALOG_FONT"/>
     <ProductCategory categoryName="Vin" productCategoryId="ALCH" productCategoryTypeId="CATALOG_CATEGORY" primaryParentCategoryId="ALIM"/>
+    <ProductCategoryMember productCategoryId='ALIM' productId='VIN' fromDate='2017-01-01 00:00:00.0'/>
     <ProductCategory categoryName="Naturel" productCategoryId="ALNAT" productCategoryTypeId="CATALOG_CATEGORY" primaryParentCategoryId="ALIM"/>
-    <ProductCategoryMember productCategoryId='ALIM' productId='' fromDate='2017-01-01 00:00:00.0'/>
+    <ProductCategoryMember productCategoryId='ALIM' productId='FARINE' fromDate='2017-01-01 00:00:00.0'/>
+    <ProductCategoryMember productCategoryId='ALIM' productId='MIEL' fromDate='2017-01-01 00:00:00.0'/>
+    <ProductCategoryMember productCategoryId='ALIM' productId='NOIX' fromDate='2017-01-01 00:00:00.0'/>
+    <ProductCategoryMember productCategoryId='ALIM' productId='TRUFFE' fromDate='2017-01-01 00:00:00.0'/>
     <ProductCategory categoryName="Taxe séjour" productCategoryId="TAXSEJ" productCategoryTypeId="CATALOG_CATEGORY" primaryParentCategoryId="CATALOG_FONT"/>
     <ProductCategoryMember productCategoryId='TAXSEJ' productId='TAXSEJAD' fromDate='2017-01-01 00:00:00.0'/>
     <ProductCategoryMember productCategoryId='TAXSEJ' productId='TAXSEJADEXO' fromDate='2017-01-01 00:00:00.0'/>
     <ProductCategoryMember productCategoryId='TAXSEJ' productId='TAXSEJENF' fromDate='2017-01-01 00:00:00.0'/>
 
     <ProductCategory categoryName="Taxe séjour Application Adulte 1" productCategoryId="TAXSEJADAPP" productCategoryTypeId="CATALOG_CATEGORY"/>
-    <ProductCategoryMember productCategoryId='TAXSEJADAPP' productId='CHORCH1P' fromDate='2017-01-01 00:00:00.0'/>
-    <ProductCategoryMember productCategoryId='TAXSEJADAPP' productId='CHFDC1P' fromDate='2017-01-01 00:00:00.0'/>
-    <ProductCategoryMember productCategoryId='TAXSEJADAPP' productId='CHEDB1P' fromDate='2017-01-01 00:00:00.0'/>
+    <delete>
+        <ProductCategoryMember productCategoryId='TAXSEJADAPP' productId='CHORCH1P' fromDate='2017-01-01 00:00:00.0'/>
+        <ProductCategoryMember productCategoryId='TAXSEJADAPP' productId='CHFDC1P' fromDate='2017-01-01 00:00:00.0'/>
+        <ProductCategoryMember productCategoryId='TAXSEJADAPP' productId='CHEDB1P' fromDate='2017-01-01 00:00:00.0'/>
+        <ProductCategoryMember productCategoryId='TAXSEJADAPP' productId='CHORCH2P' fromDate='2017-01-01 00:00:00.0'/>
+        <ProductCategoryMember productCategoryId='TAXSEJADAPP' productId='CHFDC2P' fromDate='2017-01-01 00:00:00.0'/>
+        <ProductCategoryMember productCategoryId='TAXSEJADAPP' productId='CHEDB2P' fromDate='2017-01-01 00:00:00.0'/>
+    </delete>
+    <ProductCategoryMember productCategoryId='TAXSEJADAPP' productId='CHAMBRE1P' fromDate='2017-01-01 00:00:00.0'/>
     <ProductCategoryMember productCategoryId='TAXSEJADAPP' productId='CHADSUPP' fromDate='2017-01-01 00:00:00.0'/>
-    <ProductCategoryMember productCategoryId='TAXSEJADAPP' productId='CHORCH2P' fromDate='2017-01-01 00:00:00.0'/>
-    <ProductCategoryMember productCategoryId='TAXSEJADAPP' productId='CHFDC2P' fromDate='2017-01-01 00:00:00.0'/>
-    <ProductCategoryMember productCategoryId='TAXSEJADAPP' productId='CHEDB2P' fromDate='2017-01-01 00:00:00.0'/>
     <ProductCategory categoryName="Taxe séjour Application Adulte 2" productCategoryId="TAXSEJADAPP2" productCategoryTypeId="CATALOG_CATEGORY"/>
-    <ProductCategoryMember productCategoryId='TAXSEJADAPP2' productId='CHORCH2P' fromDate='2017-01-01 00:00:00.0'/>
-    <ProductCategoryMember productCategoryId='TAXSEJADAPP2' productId='CHFDC2P' fromDate='2017-01-01 00:00:00.0'/>
-    <ProductCategoryMember productCategoryId='TAXSEJADAPP2' productId='CHEDB2P' fromDate='2017-01-01 00:00:00.0'/>
+    <ProductCategoryMember productCategoryId='TAXSEJADAPP2' productId='CHAMBRE2P' fromDate='2017-01-01 00:00:00.0'/>
+    <delete>
+        <ProductCategoryMember productCategoryId='TAXSEJADAPP2' productId='CHORCH2P' fromDate='2017-01-01 00:00:00.0'/>
+        <ProductCategoryMember productCategoryId='TAXSEJADAPP2' productId='CHFDC2P' fromDate='2017-01-01 00:00:00.0'/>
+        <ProductCategoryMember productCategoryId='TAXSEJADAPP2' productId='CHEDB2P' fromDate='2017-01-01 00:00:00.0'/>
+    </delete>
     <ProductCategory categoryName="Taxe séjour Application Enfant" productCategoryId="TAXSEJENFAPP" productCategoryTypeId="CATALOG_CATEGORY"/>
     <ProductCategoryMember productCategoryId='TAXSEJENFAPP' productId='CHENFSUPP' fromDate='2017-01-01 00:00:00.0'/>
     <ProductCategoryMember productCategoryId='TAXSEJENFAPP' productId='CHBEBESUPP' fromDate='2017-01-01 00:00:00.0'/>
@@ -160,7 +168,7 @@ under the License.
 
 
     <!--Application auto de la taxe de séjour-->
-    <ProductPromo productPromoId="9010" promoName="Taxe de séjour sur les chambres 1P" userEntered="Y" useLimitPerOrder="1000" createdDate="2001-05-13 12:00:00.0">
+    <ProductPromo productPromoId="9010" promoName="Taxe de séjour sur les chambres 1P" userEntered="N" useLimitPerOrder="1000" createdDate="2001-05-13 12:00:00.0">
         <promoText><![CDATA[Pour chaque location de chambre 1P, ajout de la taxe de séjour associée !]]></promoText>
     </ProductPromo>
     <ProductPromoRule productPromoId="9010" productPromoRuleId="01" ruleName="Taxe sejour"/>
@@ -168,15 +176,15 @@ under the License.
     <ProductPromoCond productPromoId="9010" productPromoRuleId="01" productPromoCondSeqId="01" inputParamEnumId="PPIP_PRODUCT_TOTAL" operatorEnumId="PPC_GTE" condValue="1"/>
     <ProductPromoCategory productPromoId="9010" productPromoRuleId="01" productPromoActionSeqId="_NA_" productPromoCondSeqId="01" productCategoryId="TAXSEJADAPP" andGroupId="_NA_" productPromoApplEnumId="PPPA_INCLUDE" includeSubCategories="Y"/>
     <ProductStorePromoAppl productStoreId="FONTENILLE" productPromoId="9010" fromDate="2001-05-13 12:00:00.0" sequenceNum="1"/>
-    <ProductPromo productPromoId="9011" promoName="Taxe de séjour sur les chambres 2P" userEntered="Y" useLimitPerOrder="1000" createdDate="2001-05-13 12:00:00.0">
+    <ProductPromo productPromoId="9011" promoName="Taxe de séjour sur les chambres 2P" userEntered="N" useLimitPerOrder="1000" createdDate="2001-05-13 12:00:00.0" >
         <promoText><![CDATA[Pour chaque location de chambre 2P, ajout de la taxe de séjour associée !]]></promoText>
     </ProductPromo>
     <ProductPromoRule productPromoId="9011" productPromoRuleId="01" ruleName="Taxe sejour"/>
-    <ProductPromoAction productPromoId="9011" productPromoRuleId="01" productPromoActionSeqId="01" productPromoActionEnumId="PROMO_GWP" orderAdjustmentTypeId="PROMOTION_ADJUSTMENT" useCartQuantity="Y" productId="TAXSEJAD"/>
+    <ProductPromoAction productPromoId="9011" productPromoRuleId="01" productPromoActionSeqId="01" productPromoActionEnumId="PROMO_GWP" orderAdjustmentTypeId="PROMOTION_ADJUSTMENT" useCartQuantity="Y" productId="TAXSEJAD" amount="0.88"/>
     <ProductPromoCond productPromoId="9011" productPromoRuleId="01" productPromoCondSeqId="01" inputParamEnumId="PPIP_PRODUCT_TOTAL" operatorEnumId="PPC_GTE" condValue="1"/>
     <ProductPromoCategory productPromoId="9011" productPromoRuleId="01" productPromoActionSeqId="_NA_" productPromoCondSeqId="01" productCategoryId="TAXSEJADAPP2" andGroupId="_NA_" productPromoApplEnumId="PPPA_INCLUDE" includeSubCategories="Y"/>
     <ProductStorePromoAppl productStoreId="FONTENILLE" productPromoId="9011" fromDate="2001-05-13 12:00:00.0" sequenceNum="1"/>
-    <ProductPromo productPromoId="9012" promoName="Taxe de séjour sur enfant" userEntered="Y" useLimitPerOrder="1000" createdDate="2001-05-13 12:00:00.0">
+    <ProductPromo productPromoId="9012" promoName="Taxe de séjour sur enfant" userEntered="N" useLimitPerOrder="1000" createdDate="2001-05-13 12:00:00.0">
         <promoText><![CDATA[Pour chaque location de chambre, ajout de la taxe de séjour enfant associée !]]></promoText>
     </ProductPromo>
     <ProductPromoRule productPromoId="9012" productPromoRuleId="01" ruleName="Taxe sejour"/>
@@ -204,8 +212,9 @@ under the License.
     <!--Prix tax sejour-->
     <ProductPrice productId="TAXSEJAD" productPricePurposeId="PURCHASE" productPriceTypeId="DEFAULT_PRICE" currencyUomId="EUR" productStoreGroupId="_NA_" fromDate="2017-01-01 12:00:00.0" price="0.88" />
 
-    <!--Prix autre produit-->
+    <!--Prix autre produit
     <ProductPrice productId="" productPricePurposeId="PURCHASE" productPriceTypeId="DEFAULT_PRICE" currencyUomId="EUR" productStoreGroupId="_NA_" fromDate="2017-01-01 12:00:00.0" price="" />
+    -->
 
 
 
