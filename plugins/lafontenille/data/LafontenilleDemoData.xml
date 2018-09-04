@@ -22,23 +22,23 @@ under the License.
 
     <!--Produit chambre -->
     <Product productId="CHAMBRE1P" productTypeId="SERVICE" internalName="Chambre 1 personne" isVirtual="Y" isVariant="N"/>
-    <Product productId="CHORCH1P" productTypeId="SERVICE" internalName="Ch. Orchidée 1 personne" isVirtual="N" isVariant="Y"/>
+    <Product productId="CHORCH1P" productTypeId="SERVICE" internalName="Ch. Orchidée 1 personne" brandName="Ch. Orchidée (1 pers.)" isVirtual="N" isVariant="Y"/>
     <ProductAssoc fromDate="2017-01-01 12:00:00.0" productAssocTypeId="PRODUCT_VARIANT" productId="CHAMBRE1P" productIdTo="CHORCH1P" quantity="1.0" reason=""/>
-    <Product productId="CHFDC1P" productTypeId="SERVICE" internalName="Ch. Feuille de chêne 1 personne" isVirtual="N" isVariant="Y"/>
+    <Product productId="CHFDC1P" productTypeId="SERVICE" internalName="Ch. Feuille de chêne 1 personne" brandName="Ch. Feuille de chêne (1 pers.)" isVirtual="N" isVariant="Y"/>
     <ProductAssoc fromDate="2017-01-01 12:00:00.0" productAssocTypeId="PRODUCT_VARIANT" productId="CHAMBRE1P" productIdTo="CHFDC1P" quantity="1.0" reason=""/>
-    <Product productId="CHEDB1P" productTypeId="SERVICE" internalName="Ch. Epis de Blé 1 personne" isVirtual="N" isVariant="Y"/>
+    <Product productId="CHEDB1P" productTypeId="SERVICE" internalName="Ch. Epis de Blé 1 personne" brandName="Ch. Epis de Blé (1 pers.)" isVirtual="N" isVariant="Y"/>
     <ProductAssoc fromDate="2017-01-01 12:00:00.0" productAssocTypeId="PRODUCT_VARIANT" productId="CHAMBRE1P" productIdTo="CHEDB1P" quantity="1.0" reason=""/>
 
     <Product productId="CHAMBRE2P" productTypeId="SERVICE" internalName="Chambre 1 personne" isVirtual="Y" isVariant="N"/>
-    <Product productId="CHORCH2P" productTypeId="SERVICE" internalName="Ch. Orchidée 2 personnes" isVirtual="N" isVariant="Y"/>
+    <Product productId="CHORCH2P" productTypeId="SERVICE" internalName="Ch. Orchidée 2 personnes" brandName="Ch. Orchidée (2 pers.)" isVirtual="N" isVariant="Y"/>
     <ProductAssoc fromDate="2017-01-01 12:00:00.0" productAssocTypeId="PRODUCT_VARIANT" productId="CHAMBRE2P" productIdTo="CHORCH2P" quantity="1.0" reason=""/>
-    <Product productId="CHFDC2P" productTypeId="SERVICE" internalName="Ch. Feuille de chêne 2 personnes" isVirtual="N" isVariant="Y"/>
+    <Product productId="CHFDC2P" productTypeId="SERVICE" internalName="Ch. Feuille de chêne 2 personnes" brandName="Ch. Feuille de chêne (2 pers.)" isVirtual="N" isVariant="Y"/>
     <ProductAssoc fromDate="2017-01-01 12:00:00.0" productAssocTypeId="PRODUCT_VARIANT" productId="CHAMBRE2P" productIdTo="CHFDC2P" quantity="1.0" reason=""/>
-    <Product productId="CHEDB2P" productTypeId="SERVICE" internalName="Ch. Epis de Blé 2 personnes" isVirtual="N" isVariant="Y"/>
+    <Product productId="CHEDB2P" productTypeId="SERVICE" internalName="Ch. Epis de Blé 2 personnes" brandName="Ch. Epis de Blé (2 pers.)" isVirtual="N" isVariant="Y"/>
     <ProductAssoc fromDate="2017-01-01 12:00:00.0" productAssocTypeId="PRODUCT_VARIANT" productId="CHAMBRE2P" productIdTo="CHEDB2P" quantity="1.0" reason=""/>
 
-    <Product productId="CHADSUPP" productTypeId="SERVICE" internalName="Adulte supplémentaire" isVirtual="N" isVariant="N"/>
-    <Product productId="CHENFSUPP" productTypeId="SERVICE" internalName="Enfant supplémentaire" isVirtual="N" isVariant="N"/>
+    <Product productId="CHADSUPP" productTypeId="SERVICE" internalName="Adulte supplémentaire" brandName="Adulte supplémentaire" isVirtual="N" isVariant="N"/>
+    <Product productId="CHENFSUPP" productTypeId="SERVICE" internalName="Enfant supplémentaire" brandName="" isVirtual="N" isVariant="N"/>
     <Product productId="CHBEBESUPP" productTypeId="SERVICE" internalName="Bébé supplémentaire" isVirtual="N" isVariant="N"/>
 
     <!--Produit Tax de sejour -->
@@ -93,29 +93,6 @@ under the License.
     <ProductCategoryMember productCategoryId='TAXSEJ' productId='TAXSEJADEXO' fromDate='2017-01-01 00:00:00.0'/>
     <ProductCategoryMember productCategoryId='TAXSEJ' productId='TAXSEJENF' fromDate='2017-01-01 00:00:00.0'/>
 
-    <ProductCategory categoryName="Taxe séjour Application Adulte 1" productCategoryId="TAXSEJADAPP" productCategoryTypeId="CATALOG_CATEGORY"/>
-    <delete>
-        <ProductCategoryMember productCategoryId='TAXSEJADAPP' productId='CHORCH1P' fromDate='2017-01-01 00:00:00.0'/>
-        <ProductCategoryMember productCategoryId='TAXSEJADAPP' productId='CHFDC1P' fromDate='2017-01-01 00:00:00.0'/>
-        <ProductCategoryMember productCategoryId='TAXSEJADAPP' productId='CHEDB1P' fromDate='2017-01-01 00:00:00.0'/>
-        <ProductCategoryMember productCategoryId='TAXSEJADAPP' productId='CHORCH2P' fromDate='2017-01-01 00:00:00.0'/>
-        <ProductCategoryMember productCategoryId='TAXSEJADAPP' productId='CHFDC2P' fromDate='2017-01-01 00:00:00.0'/>
-        <ProductCategoryMember productCategoryId='TAXSEJADAPP' productId='CHEDB2P' fromDate='2017-01-01 00:00:00.0'/>
-    </delete>
-    <ProductCategoryMember productCategoryId='TAXSEJADAPP' productId='CHAMBRE1P' fromDate='2017-01-01 00:00:00.0'/>
-    <ProductCategoryMember productCategoryId='TAXSEJADAPP' productId='CHADSUPP' fromDate='2017-01-01 00:00:00.0'/>
-    <ProductCategory categoryName="Taxe séjour Application Adulte 2" productCategoryId="TAXSEJADAPP2" productCategoryTypeId="CATALOG_CATEGORY"/>
-    <ProductCategoryMember productCategoryId='TAXSEJADAPP2' productId='CHAMBRE2P' fromDate='2017-01-01 00:00:00.0'/>
-    <delete>
-        <ProductCategoryMember productCategoryId='TAXSEJADAPP2' productId='CHORCH2P' fromDate='2017-01-01 00:00:00.0'/>
-        <ProductCategoryMember productCategoryId='TAXSEJADAPP2' productId='CHFDC2P' fromDate='2017-01-01 00:00:00.0'/>
-        <ProductCategoryMember productCategoryId='TAXSEJADAPP2' productId='CHEDB2P' fromDate='2017-01-01 00:00:00.0'/>
-    </delete>
-    <ProductCategory categoryName="Taxe séjour Application Enfant" productCategoryId="TAXSEJENFAPP" productCategoryTypeId="CATALOG_CATEGORY"/>
-    <ProductCategoryMember productCategoryId='TAXSEJENFAPP' productId='CHENFSUPP' fromDate='2017-01-01 00:00:00.0'/>
-    <ProductCategoryMember productCategoryId='TAXSEJENFAPP' productId='CHBEBESUPP' fromDate='2017-01-01 00:00:00.0'/>
-
-
     <ProductCategory categoryName="Taxe France" longDescription="Taxe France" productCategoryId="TAXFR" productCategoryTypeId="CATALOG_CATEGORY"/>
     <ProductCategory categoryName="20%" productCategoryId="TVA20" productCategoryTypeId="CATALOG_CATEGORY" primaryParentCategoryId="TAXFR"/>
     <ProductCategoryMember productCategoryId='TVA20' productId='RPVIN' fromDate='2017-01-01 00:00:00.0'/>
@@ -143,6 +120,10 @@ under the License.
     <TaxAuthorityCategory productCategoryId="TVA20" taxAuthGeoId="FRA" taxAuthPartyId="TRESOR_PUBLIC_FR"/>
     <TaxAuthorityCategory productCategoryId="TVA10" taxAuthGeoId="FRA" taxAuthPartyId="TRESOR_PUBLIC_FR"/>
     <TaxAuthorityCategory productCategoryId="TVA55" taxAuthGeoId="FRA" taxAuthPartyId="TRESOR_PUBLIC_FR"/>
+    <Party partyId="_NA_" partyTypeId="PARTY_GROUP" statusId="PARTY_ENABLED" />
+    <PartyGroup groupName="No applicate" partyId="_NA_"/>
+    <PartyRole partyId="_NA_" roleTypeId="CARRIER"/>
+    <ShipmentMethodType description="Vente Direct" shipmentMethodTypeId="NO_SHIPPING"/>
     <ProductStore productStoreId="FONTENILLE" storeName="Fontenille" companyName="" title=""
         subtitle="" payToPartyId="FONTENILLE" prorateShipping="N" prorateTaxes="Y" isDemoStore="N" requirementMethodEnumId="PRODRQM_DS"
         addToCartReplaceUpsell="N" addToCartRemoveIncompat="N" orderDecimalQuantity="N" splitPayPrefPerShpGrp="N"
@@ -152,81 +133,103 @@ under the License.
         headerApprovedStatus="ORDER_APPROVED" itemApprovedStatus="ITEM_APPROVED" digitalItemApprovedStatus="ITEM_APPROVED" headerDeclinedStatus="ORDER_REJECTED"
         itemDeclinedStatus="ITEM_REJECTED" headerCancelStatus="ORDER_CANCELLED" itemCancelStatus="ITEM_CANCELLED"
         visualThemeId="EC_DEFAULT" prodSearchExcludeVariants="Y" autoApproveInvoice="Y" autoApproveOrder="Y" showOutOfStockProducts="Y"/>
-    <ProductStorePaymentSetting productStoreId="FONTENILLE" paymentMethodTypeId="EFT_ACCOUNT" paymentServiceTypeEnumId="PRDS_PAY_AUTH" paymentService="alwaysApproveEFTProcessor" paymentCustomMethodId="EFT_AUTH_ALWAYSAPPRO"/>
+    <CarrierShipmentMethod partyId="_NA_" roleTypeId="CARRIER" shipmentMethodTypeId="NO_SHIPPING" sequenceNumber="1"/>
+    <ProductStorePaymentSetting productStoreId="FONTENILLE" paymentMethodTypeId="EFT_ACCOUNT" paymentServiceTypeEnumId="PRDS_PAY_EXTERNAL"/>
+    <ProductStorePaymentSetting productStoreId="FONTENILLE" paymentMethodTypeId="EXT_OFFLINE" paymentServiceTypeEnumId="PRDS_PAY_EXTERNAL"/>
     <ProductStoreFacility productStoreId="FONTENILLE" facilityId="FONT_LAPAN" fromDate="2017-01-01 12:00:00.0" sequenceNum="1"/>
+
+    <ProductStoreShipmentMeth allowUspsAddr="N" includeNoChargeItems="Y" partyId="_NA_" productStoreId="FONTENILLE" productStoreShipMethId="FONT_NO_SHIP" requireUspsAddr="N" roleTypeId="CARRIER" sequenceNumber="1" shipmentMethodTypeId="NO_SHIPPING"/>
+
     <!--TVA-->
-    <TaxAuthorityRateProduct productCategoryId="CH" productStoreId="FONTENILLE" taxAuthGeoId="FRA" taxAuthPartyId="TRESOR_PUBLIC_FR" taxAuthorityRateSeqId="FR_TVA_1" taxAuthorityRateTypeId="SALES_TAX" taxPercentage="20" taxPromotions="Y" taxShipping="Y"/>
-    <TaxAuthorityRateProduct productCategoryId="ALCH" productStoreId="FONTENILLE" taxAuthGeoId="FRA" taxAuthPartyId="TRESOR_PUBLIC_FR" taxAuthorityRateSeqId="FR_TVA_11" taxAuthorityRateTypeId="SALES_TAX" taxPercentage="20" taxPromotions="Y" taxShipping="Y"/>
-    <TaxAuthorityRateProduct productCategoryId="TVA20" productStoreId="FONTENILLE" taxAuthGeoId="FRA" taxAuthPartyId="TRESOR_PUBLIC_FR" taxAuthorityRateSeqId="FR_TVA_12" taxAuthorityRateTypeId="SALES_TAX" taxPercentage="20" taxPromotions="Y" taxShipping="Y"/>
-    <TaxAuthorityRateProduct productCategoryId="TVA10" productStoreId="FONTENILLE" taxAuthGeoId="FRA" taxAuthPartyId="TRESOR_PUBLIC_FR" taxAuthorityRateSeqId="FR_TVA_2" taxAuthorityRateTypeId="SALES_TAX" taxPercentage="10" taxPromotions="Y" taxShipping="Y"/>
-    <TaxAuthorityRateProduct productCategoryId="TVA55" productStoreId="FONTENILLE" taxAuthGeoId="FRA" taxAuthPartyId="TRESOR_PUBLIC_FR" taxAuthorityRateSeqId="FR_TVA_3" taxAuthorityRateTypeId="SALES_TAX" taxPercentage="5.5" taxPromotions="Y" taxShipping="Y"/>
-    <TaxAuthorityRateProduct productCategoryId="ALNAT" productStoreId="FONTENILLE" taxAuthGeoId="FRA" taxAuthPartyId="TRESOR_PUBLIC_FR" taxAuthorityRateSeqId="FR_TVA_3" taxAuthorityRateTypeId="SALES_TAX" taxPercentage="5.5" taxPromotions="Y" taxShipping="Y"/>
+    <TaxAuthorityRateProduct productCategoryId="CH" productStoreId="FONTENILLE" taxAuthGeoId="FRA" taxAuthPartyId="TRESOR_PUBLIC_FR" taxAuthorityRateSeqId="FR_TVA_1" taxAuthorityRateTypeId="VAT_TAX" taxPercentage="20" taxPromotions="Y" taxShipping="Y" description="TVA 20%"/>
+    <TaxAuthorityRateProduct productCategoryId="ALCH" productStoreId="FONTENILLE" taxAuthGeoId="FRA" taxAuthPartyId="TRESOR_PUBLIC_FR" taxAuthorityRateSeqId="FR_TVA_11" taxAuthorityRateTypeId="VAT_TAX" taxPercentage="20" taxPromotions="Y" taxShipping="Y" description="TVA 20%"/>
+    <TaxAuthorityRateProduct productCategoryId="TVA20" productStoreId="FONTENILLE" taxAuthGeoId="FRA" taxAuthPartyId="TRESOR_PUBLIC_FR" taxAuthorityRateSeqId="FR_TVA_12" taxAuthorityRateTypeId="VAT_TAX" taxPercentage="20" taxPromotions="Y" taxShipping="Y" description="TVA 20%"/>
+    <TaxAuthorityRateProduct productCategoryId="TVA10" productStoreId="FONTENILLE" taxAuthGeoId="FRA" taxAuthPartyId="TRESOR_PUBLIC_FR" taxAuthorityRateSeqId="FR_TVA_2" taxAuthorityRateTypeId="VAT_TAX" taxPercentage="10" taxPromotions="Y" taxShipping="Y" description="TVA 10%"/>
+    <TaxAuthorityRateProduct productCategoryId="TVA55" productStoreId="FONTENILLE" taxAuthGeoId="FRA" taxAuthPartyId="TRESOR_PUBLIC_FR" taxAuthorityRateSeqId="FR_TVA_3" taxAuthorityRateTypeId="VAT_TAX" taxPercentage="5.5" taxPromotions="Y" taxShipping="Y" description="TVA 5.5%"/>
+    <TaxAuthorityRateProduct productCategoryId="ALNAT" productStoreId="FONTENILLE" taxAuthGeoId="FRA" taxAuthPartyId="TRESOR_PUBLIC_FR" taxAuthorityRateSeqId="FR_TVA_3" taxAuthorityRateTypeId="VAT_TAX" taxPercentage="5.5" taxPromotions="Y" taxShipping="Y" description="TVA 5.5%"/>
 
     <ProdCatalog prodCatalogId="CATALOG_FONT" catalogName="Fontenille" useQuickAdd="Y"/>
     <ProductStoreCatalog productStoreId="FONTENILLE" prodCatalogId="CATALOG_FONT" fromDate="2017-01-01 12:00:00.0" sequenceNum="1"/>
     <ProdCatalogCategory prodCatalogCategoryTypeId="PCCT_BROWSE_ROOT" prodCatalogId="CATALOG_FONT" productCategoryId="CATALOG_FONT" fromDate="2017-01-01 00:00:00.0" sequenceNum="2"/>
 
-
     <!--Application auto de la taxe de séjour-->
-    <ProductPromo productPromoId="9010" promoName="Taxe de séjour sur les chambres 1P" userEntered="N" useLimitPerOrder="1000" createdDate="2001-05-13 12:00:00.0">
-        <promoText><![CDATA[Pour chaque location de chambre 1P, ajout de la taxe de séjour associée !]]></promoText>
-    </ProductPromo>
-    <ProductPromoRule productPromoId="9010" productPromoRuleId="01" ruleName="Taxe sejour"/>
-    <ProductPromoAction productPromoId="9010" productPromoRuleId="01" productPromoActionSeqId="01" productPromoActionEnumId="PROMO_GWP" orderAdjustmentTypeId="PROMOTION_ADJUSTMENT" useCartQuantity="Y" productId="TAXSEJAD"/>
-    <ProductPromoCond productPromoId="9010" productPromoRuleId="01" productPromoCondSeqId="01" inputParamEnumId="PPIP_PRODUCT_TOTAL" operatorEnumId="PPC_GTE" condValue="1"/>
-    <ProductPromoCategory productPromoId="9010" productPromoRuleId="01" productPromoActionSeqId="_NA_" productPromoCondSeqId="01" productCategoryId="TAXSEJADAPP" andGroupId="_NA_" productPromoApplEnumId="PPPA_INCLUDE" includeSubCategories="Y"/>
-    <ProductStorePromoAppl productStoreId="FONTENILLE" productPromoId="9010" fromDate="2001-05-13 12:00:00.0" sequenceNum="1"/>
-    <ProductPromo productPromoId="9011" promoName="Taxe de séjour sur les chambres 2P" userEntered="N" useLimitPerOrder="1000" createdDate="2001-05-13 12:00:00.0" >
-        <promoText><![CDATA[Pour chaque location de chambre 2P, ajout de la taxe de séjour associée !]]></promoText>
-    </ProductPromo>
-    <ProductPromoRule productPromoId="9011" productPromoRuleId="01" ruleName="Taxe sejour"/>
-    <ProductPromoAction productPromoId="9011" productPromoRuleId="01" productPromoActionSeqId="01" productPromoActionEnumId="PROMO_GWP" orderAdjustmentTypeId="PROMOTION_ADJUSTMENT" useCartQuantity="Y" productId="TAXSEJAD" amount="0.88"/>
-    <ProductPromoCond productPromoId="9011" productPromoRuleId="01" productPromoCondSeqId="01" inputParamEnumId="PPIP_PRODUCT_TOTAL" operatorEnumId="PPC_GTE" condValue="1"/>
-    <ProductPromoCategory productPromoId="9011" productPromoRuleId="01" productPromoActionSeqId="_NA_" productPromoCondSeqId="01" productCategoryId="TAXSEJADAPP2" andGroupId="_NA_" productPromoApplEnumId="PPPA_INCLUDE" includeSubCategories="Y"/>
-    <ProductStorePromoAppl productStoreId="FONTENILLE" productPromoId="9011" fromDate="2001-05-13 12:00:00.0" sequenceNum="1"/>
-    <ProductPromo productPromoId="9012" promoName="Taxe de séjour sur enfant" userEntered="N" useLimitPerOrder="1000" createdDate="2001-05-13 12:00:00.0">
-        <promoText><![CDATA[Pour chaque location de chambre, ajout de la taxe de séjour enfant associée !]]></promoText>
-    </ProductPromo>
-    <ProductPromoRule productPromoId="9012" productPromoRuleId="01" ruleName="Taxe sejour"/>
-    <ProductPromoAction productPromoId="9012" productPromoRuleId="01" productPromoActionSeqId="01" productPromoActionEnumId="PROMO_GWP" orderAdjustmentTypeId="PROMOTION_ADJUSTMENT" useCartQuantity="Y" productId="TAXSEJAD"/>
-    <ProductPromoCond productPromoId="9012" productPromoRuleId="01" productPromoCondSeqId="01" inputParamEnumId="PPIP_PRODUCT_TOTAL" operatorEnumId="PPC_GTE" condValue="1"/>
-    <ProductPromoCategory productPromoId="9012" productPromoRuleId="01" productPromoActionSeqId="_NA_" productPromoCondSeqId="01" productCategoryId="TAXSEJENFAPP" andGroupId="_NA_" productPromoApplEnumId="PPPA_INCLUDE" includeSubCategories="Y"/>
-    <ProductStorePromoAppl productStoreId="FONTENILLE" productPromoId="9012" fromDate="2001-05-13 12:00:00.0" sequenceNum="1"/>
+    <ProductAssocType productAssocTypeId="PA_ORDER_MANDATORY" description="Ordering mandatory"/>
+    <ProductAssoc productId="CHAMBRE1P" quantity="1" productAssocTypeId="PA_ORDER_MANDATORY" fromDate="2017-01-01 12:00:00.0" productIdTo="TAXSEJAD"/>
+    <ProductAssoc productId="CHAMBRE2P" quantity="2" productAssocTypeId="PA_ORDER_MANDATORY" fromDate="2017-01-01 12:00:00.0" productIdTo="TAXSEJAD"/>
+    <ProductAssoc productId="CHADSUPP" quantity="1" productAssocTypeId="PA_ORDER_MANDATORY" fromDate="2017-01-01 12:00:00.0" productIdTo="TAXSEJAD"/>
+    <ProductAssoc productId="CHENFSUPP" quantity="1" productAssocTypeId="PA_ORDER_MANDATORY" fromDate="2017-01-01 12:00:00.0" productIdTo="TAXSEJENF"/>
+    <ProductAssoc productId="CHBEBESUPP" quantity="1" productAssocTypeId="PA_ORDER_MANDATORY" fromDate="2017-01-01 12:00:00.0" productIdTo="TAXSEJENF"/>
+
+    <ProductAssoc productId="RPSTD" quantity="1" productAssocTypeId="PA_ORDER_MANDATORY" fromDate="2017-01-01 12:00:00.0" productIdTo="RPVIN"/>
+    <ProductAssoc productId="RPLG" quantity="1" productAssocTypeId="PA_ORDER_MANDATORY" fromDate="2017-01-01 12:00:00.0" productIdTo="RPVIN"/>
+    <ProductAssoc productId="RPTRU" quantity="1" productAssocTypeId="PA_ORDER_MANDATORY" fromDate="2017-01-01 12:00:00.0" productIdTo="RPVIN"/>
 
     <!--Prix chambe-->
     <ProductPrice productId="CHAMBRE1P" productPricePurposeId="PURCHASE" productPriceTypeId="DEFAULT_PRICE" currencyUomId="EUR" productStoreGroupId="_NA_" fromDate="2017-01-01 12:00:00.0" price="60"
-                  taxAuthGeoId="FRA" taxAuthPartyId="TRESOR_PUBLIC_FR" taxAuthorityRateSeqId="FR_TVA_1" />
-    <ProductPrice productId="CHAMBRE2P" productPricePurposeId="PURCHASE" productPriceTypeId="DEFAULT_PRICE" currencyUomId="EUR" productStoreGroupId="_NA_" fromDate="2017-01-01 12:00:00.0" price="65" />
+                  taxAuthGeoId="FRA" taxAuthPartyId="TRESOR_PUBLIC_FR" taxAuthorityRateSeqId="FR_TVA_1" taxInPrice="Y"/>
+    <ProductPrice productId="CHAMBRE2P" productPricePurposeId="PURCHASE" productPriceTypeId="DEFAULT_PRICE" currencyUomId="EUR" productStoreGroupId="_NA_" fromDate="2017-01-01 12:00:00.0" price="65" taxInPrice="Y"/>
     <ProductPrice productId="CHBEBESUPP" productPricePurposeId="PURCHASE" productPriceTypeId="DEFAULT_PRICE" currencyUomId="EUR" productStoreGroupId="_NA_" fromDate="2017-01-01 12:00:00.0" price="0" />
     <ProductPrice productId="CHENFSUPP" productPricePurposeId="PURCHASE" productPriceTypeId="DEFAULT_PRICE" currencyUomId="EUR" productStoreGroupId="_NA_" fromDate="2017-01-01 12:00:00.0" price="10"
-                  taxAuthGeoId="FRA" taxAuthPartyId="TRESOR_PUBLIC_FR" taxAuthorityRateSeqId="FR_TVA_1" />
-    <ProductPrice productId="CHADSUPP" productPricePurposeId="PURCHASE" productPriceTypeId="DEFAULT_PRICE" currencyUomId="EUR" productStoreGroupId="_NA_" fromDate="2017-01-01 12:00:00.0" price="10" />
+                  taxAuthGeoId="FRA" taxAuthPartyId="TRESOR_PUBLIC_FR" taxAuthorityRateSeqId="FR_TVA_1" taxInPrice="Y" />
+    <ProductPrice productId="CHADSUPP" productPricePurposeId="PURCHASE" productPriceTypeId="DEFAULT_PRICE" currencyUomId="EUR" productStoreGroupId="_NA_" fromDate="2017-01-01 12:00:00.0" price="10" taxInPrice="Y" />
+
+    <ProductPrice productId="CHAMBRE1P" productPricePurposeId="PURCHASE" productPriceTypeId="LIST_PRICE" currencyUomId="EUR" productStoreGroupId="_NA_" fromDate="2017-01-01 12:00:00.0" price="60"
+                  taxAuthGeoId="FRA" taxAuthPartyId="TRESOR_PUBLIC_FR" taxAuthorityRateSeqId="FR_TVA_1" taxInPrice="Y"/>
+    <ProductPrice productId="CHAMBRE2P" productPricePurposeId="PURCHASE" productPriceTypeId="LIST_PRICE" currencyUomId="EUR" productStoreGroupId="_NA_" fromDate="2017-01-01 12:00:00.0" price="65"
+                  taxAuthGeoId="FRA" taxAuthPartyId="TRESOR_PUBLIC_FR" taxAuthorityRateSeqId="FR_TVA_1" taxInPrice="Y"/>
 
     <!--Prix repas-->
-    <ProductPrice productId="RPSTD" productPricePurposeId="PURCHASE" productPriceTypeId="DEFAULT_PRICE" currencyUomId="EUR" productStoreGroupId="_NA_" fromDate="2017-01-01 12:00:00.0" price="13" />
-    <ProductPrice productId="RPLG" productPricePurposeId="PURCHASE" productPriceTypeId="DEFAULT_PRICE" currencyUomId="EUR" productStoreGroupId="_NA_" fromDate="2017-01-01 12:00:00.0" price="12" />
-    <ProductPrice productId="RPSTDENF" productPricePurposeId="PURCHASE" productPriceTypeId="DEFAULT_PRICE" currencyUomId="EUR" productStoreGroupId="_NA_" fromDate="2017-01-01 12:00:00.0" price="8" />
-    <ProductPrice productId="RPTRU" productPricePurposeId="PURCHASE" productPriceTypeId="DEFAULT_PRICE" currencyUomId="EUR" productStoreGroupId="_NA_" fromDate="2017-01-01 12:00:00.0" price="25" />
-    <ProductPrice productId="RPVIN" productPricePurposeId="PURCHASE" productPriceTypeId="DEFAULT_PRICE" currencyUomId="EUR" productStoreGroupId="_NA_" fromDate="2017-01-01 12:00:00.0" price="2" />
+    <ProductPrice productId="RPSTD" productPricePurposeId="PURCHASE" productPriceTypeId="DEFAULT_PRICE" currencyUomId="EUR" productStoreGroupId="_NA_" fromDate="2017-01-01 12:00:00.0" price="13"
+                  taxAuthGeoId="FRA" taxAuthPartyId="TRESOR_PUBLIC_FR" taxAuthorityRateSeqId="FR_TVA_2" taxInPrice="Y"  />
+    <ProductPrice productId="RPLG" productPricePurposeId="PURCHASE" productPriceTypeId="DEFAULT_PRICE" currencyUomId="EUR" productStoreGroupId="_NA_" fromDate="2017-01-01 12:00:00.0" price="12"
+                  taxAuthGeoId="FRA" taxAuthPartyId="TRESOR_PUBLIC_FR" taxAuthorityRateSeqId="FR_TVA_2" taxInPrice="Y" />
+    <ProductPrice productId="RPSTDENF" productPricePurposeId="PURCHASE" productPriceTypeId="DEFAULT_PRICE" currencyUomId="EUR" productStoreGroupId="_NA_" fromDate="2017-01-01 12:00:00.0" price="8"
+                  taxAuthGeoId="FRA" taxAuthPartyId="TRESOR_PUBLIC_FR" taxAuthorityRateSeqId="FR_TVA_2" taxInPrice="Y" />
+    <ProductPrice productId="RPTRU" productPricePurposeId="PURCHASE" productPriceTypeId="DEFAULT_PRICE" currencyUomId="EUR" productStoreGroupId="_NA_" fromDate="2017-01-01 12:00:00.0" price="25"
+                  taxAuthGeoId="FRA" taxAuthPartyId="TRESOR_PUBLIC_FR" taxAuthorityRateSeqId="FR_TVA_2" taxInPrice="Y" />
+    <ProductPrice productId="RPVIN" productPricePurposeId="PURCHASE" productPriceTypeId="DEFAULT_PRICE" currencyUomId="EUR" productStoreGroupId="_NA_" fromDate="2017-01-01 12:00:00.0" price="2"
+                  taxAuthGeoId="FRA" taxAuthPartyId="TRESOR_PUBLIC_FR" taxAuthorityRateSeqId="FR_TVA_1" taxInPrice="Y" />
 
     <!--Prix tax sejour-->
     <ProductPrice productId="TAXSEJAD" productPricePurposeId="PURCHASE" productPriceTypeId="DEFAULT_PRICE" currencyUomId="EUR" productStoreGroupId="_NA_" fromDate="2017-01-01 12:00:00.0" price="0.88" />
+    <ProductPrice productId="TAXSEJENF" productPricePurposeId="PURCHASE" productPriceTypeId="DEFAULT_PRICE" currencyUomId="EUR" productStoreGroupId="_NA_" fromDate="2017-01-01 12:00:00.0" price="0" />
+    <ProductPrice productId="TAXSEJADEXO" productPricePurposeId="PURCHASE" productPriceTypeId="DEFAULT_PRICE" currencyUomId="EUR" productStoreGroupId="_NA_" fromDate="2017-01-01 12:00:00.0" price="0" />
 
     <!--Prix autre produit
-    <ProductPrice productId="" productPricePurposeId="PURCHASE" productPriceTypeId="DEFAULT_PRICE" currencyUomId="EUR" productStoreGroupId="_NA_" fromDate="2017-01-01 12:00:00.0" price="" />
+    <ProductPrice productId="" productPricePurposeId="PURCHASE" productPriceTypeId="LIST_PRICE" currencyUomId="EUR" productStoreGroupId="_NA_" fromDate="2017-01-01 12:00:00.0" price="" />
     -->
 
+    <ProductPriceRule fromDate="2018-01-01 00:00:00.0" isSale="Y" productPriceRuleId="1000" ruleName="2 nuités pour une personne"/>
+    <ProductPriceAction amount="55.000000"  productPriceActionSeqId="00001" productPriceActionTypeId="PRICE_FLAT" productPriceRuleId="1000"/>
+    <ProductPriceCond condValue="CHAMBRE1P" inputParamEnumId="PRIP_PRODUCT_ID" operatorEnumId="PRC_EQ" productPriceCondSeqId="01" productPriceRuleId="1000"/>
+    <ProductPriceCond condValue="2" inputParamEnumId="PRIP_QUANTITY" operatorEnumId="PRC_EQ" productPriceCondSeqId="02" productPriceRuleId="1000"/>
+
+    <ProductPriceRule fromDate="2018-01-01 00:00:00.0" isSale="Y" productPriceRuleId="1001" ruleName="3 nuités pour une personne"/>
+    <ProductPriceAction amount="51.000000"  productPriceActionSeqId="00001" productPriceActionTypeId="PRICE_FLAT" productPriceRuleId="1001"/>
+    <ProductPriceCond condValue="CHAMBRE1P" inputParamEnumId="PRIP_PRODUCT_ID" operatorEnumId="PRC_EQ" productPriceCondSeqId="01" productPriceRuleId="1001"/>
+    <ProductPriceCond condValue="3" inputParamEnumId="PRIP_QUANTITY" operatorEnumId="PPRC_GTE" productPriceCondSeqId="02" productPriceRuleId="1001"/>
+
+
+    <ProductPriceRule fromDate="2018-01-01 00:00:00.0" isSale="Y" productPriceRuleId="1002" ruleName="2 nuités pour deux personnes"/>
+    <ProductPriceAction amount="58.5"  productPriceActionSeqId="00001" productPriceActionTypeId="PRICE_FLAT" productPriceRuleId="1002"/>
+    <ProductPriceCond condValue="CHAMBRE2P" inputParamEnumId="PRIP_PRODUCT_ID" operatorEnumId="PRC_EQ" productPriceCondSeqId="01" productPriceRuleId="1002"/>
+    <ProductPriceCond condValue="2" inputParamEnumId="PRIP_QUANTITY" operatorEnumId="PRC_EQ" productPriceCondSeqId="02" productPriceRuleId="1002"/>
+
+    <ProductPriceRule fromDate="2018-01-01 00:00:00.0" isSale="Y" productPriceRuleId="1003" ruleName="3 nuités pour deux personnes"/>
+    <ProductPriceAction amount="55"  productPriceActionSeqId="00001" productPriceActionTypeId="PRICE_FLAT" productPriceRuleId="1003"/>
+    <ProductPriceCond condValue="CHAMBRE2P" inputParamEnumId="PRIP_PRODUCT_ID" operatorEnumId="PRC_EQ" productPriceCondSeqId="01" productPriceRuleId="1003"/>
+    <ProductPriceCond condValue="3" inputParamEnumId="PRIP_QUANTITY" operatorEnumId="PRC_GTE" productPriceCondSeqId="02" productPriceRuleId="1003"/>
 
 
 
+    <CustomScreenType customScreenTypeId="CST_INVOICE_TPL" description="Invoice types template"/>
+    <CustomScreenType customScreenTypeId="CST_SALES_INV_TPL" parentTypeId="CST_INVOICE_TPL" description="Sales invoice template"/>
+    <CustomScreen customScreenId="CS_SAL_INV_CONTENT" customScreenTypeId="CST_SALES_INV_TPL" description="Sales invoice From Content"
+                  customScreenName="InvoicePDFFromContent" customScreenLocation="component://accounting/widget/AccountingPrintScreens.xml"/>
+    <CustomScreen customScreenId="CS_SAL_INV_VAT_INC" customScreenTypeId="CST_SALES_INV_TPL" description="Sales invoice Portrait with consolidate VAT"
+                  customScreenName="InvoicePDFWithConsolidateVAT" customScreenLocation="component://accounting/widget/AccountingPrintScreens.xml"/>
 
-
-
-
-
-
-
-
-
+    <PartyContentType partyContentTypeId="INVOICE_TEMPLATE" description="Content dedicate to rendering invoices"/>
+    <PartyContentType partyContentTypeId="SALES_INVOICE_TPL" parentTypeId="INVOICE_TEMPLATE" description="Content dedicate to rendering sales invoices"/>
 
 </entity-engine-xml>

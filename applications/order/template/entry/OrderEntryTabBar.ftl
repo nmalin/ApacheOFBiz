@@ -47,12 +47,14 @@ under the License.
               <li><a href="<@ofbizUrl>finalizeOrder?finalizeMode=init</@ofbizUrl>">${uiLabelMap.OrderFinalizeOrder}</a></li>
             </#if>
           </#if>
-    
+
           <#if (shoppingCart.size() > 0)>
             <li><a href="javascript:document.cartform.submit()">${uiLabelMap.OrderRecalculateOrder}</a></li>
+            <li><a href="<@ofbizUrl>additemmandatoring</@ofbizUrl>">${uiLabelMap.OrderAddMandatoring}</li>
             <li><a href="javascript:removeSelected();">${uiLabelMap.OrderRemoveSelected}</a></li>
           <#else>
             <li class="disabled">${uiLabelMap.OrderRecalculateOrder}</li>
+            <li class="disabled">${uiLabelMap.OrderAddMandatory}</li>
             <li class="disabled">${uiLabelMap.OrderRemoveSelected}</li>
           </#if>
           <li><a href="<@ofbizUrl>emptycart</@ofbizUrl>">${uiLabelMap.OrderClearOrder}</a></li>

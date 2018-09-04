@@ -45,6 +45,7 @@ import org.apache.ofbiz.base.util.UtilNumber;
 import org.apache.ofbiz.base.util.UtilProperties;
 import org.apache.ofbiz.base.util.UtilValidate;
 import org.apache.ofbiz.entity.Delegator;
+import org.apache.ofbiz.entity.GenericEntity;
 import org.apache.ofbiz.entity.GenericEntityException;
 import org.apache.ofbiz.entity.GenericPK;
 import org.apache.ofbiz.entity.GenericValue;
@@ -714,6 +715,41 @@ public class ShoppingCartEvents {
         //Determine where to send the browser
         if (controlDirective.equals(ERROR)) {
             return "error";
+        }
+        return "success";
+    }
+
+    public static String addToCartLoadMandatoryAssociation(HttpServletRequest request, HttpServletResponse response) {
+        Map<String, Object> paramMap = UtilHttp.getCombinedMap(request);
+        ShoppingCart cart = getCartObject(request);
+        Delegator delegator = (Delegator) request.getAttribute("delegator");
+        LocalDispatcher dispatcher = (LocalDispatcher) request.getAttribute("dispatcher");
+        ShoppingCartHelper cartHelper = new ShoppingCartHelper(delegator, dispatcher, cart);
+        List<ShoppingCartItem> scis = cart.getCartItemsInNoGroup();
+
+        for (ShoppingCartItem sci : scis) {
+            List<GenericValue> productAssocs = null;
+            EntityCondition cond = EntityCondition.makeCondition(UtilMisc.toList(
+                    EntityCondition.makeCondition(UtilMisc.toList(
+                            EntityCondition.makeCondition("productId", sci.getProductId()),
+                            EntityCondition.makeCondition("productId", sci.getParentProductId())), EntityOperator.OR),
+                    EntityCondition.makeCondition("productAssocTypeId", "PA_ORDER_MANDATORY")));
+            try {
+                productAssocs = EntityQuery.use(delegator).from("ProductAssoc").where(cond).filterByDate().queryList();
+            } catch (GenericEntityException e) {
+                request.setAttribute("_ERROR_MESSAGE_", e.toString());
+                return "error";
+            }
+            for (GenericValue productAssoc : productAssocs) {
+                String productIdToAdd = productAssoc.getString("productIdTo");
+                BigDecimal quantityNeeded = sci.getQuantity().multiply(productAssoc.get("quantity") != null ? productAssoc.getBigDecimal("quantity") : BigDecimal.ONE);
+                String controlDirective = processResult(cartHelper.addToCart(sci.getProdCatalogId(), null, null, productIdToAdd, null,
+                        null, null, null, null, quantityNeeded, null, null, null,
+                        null, null, sci.getShipBeforeDate(), sci.getShipAfterDate(), null, null, paramMap, null), request);
+                if (controlDirective.equals(ERROR)) {
+                    return "error";
+                }
+            }
         }
         return "success";
     }

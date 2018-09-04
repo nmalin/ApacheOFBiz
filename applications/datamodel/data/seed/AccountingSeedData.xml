@@ -684,6 +684,7 @@ under the License.
     <Enumeration description="Purchase Invoice Sales Tax" enumCode="PINV_SALES_TAX" enumId="PINV_SALES_TAX" sequenceId="03" enumTypeId="TAXABLE_INV_ITM_TY"/>
     <Enumeration description="Purchase Invoice Line Item Sales Tax" enumCode="PITM_SALES_TAX" enumId="PITM_SALES_TAX" sequenceId="04" enumTypeId="TAXABLE_INV_ITM_TY"/>
     <Enumeration description="Customer Return Sales Tax Adjustment" enumCode="CRT_SALES_TAX_ADJ" enumId="CRT_SALES_TAX_ADJ" sequenceId="05" enumTypeId="TAXABLE_INV_ITM_TY"/>
+    <Enumeration description="Sales Invoice Vat tax" enumCode="ITM_VAT_TAX" enumId="ITM_VAT_TAX" sequenceId="06" enumTypeId="TAXABLE_INV_ITM_TY"/>
 
     <PaymentMethodType description="Credit Card" paymentMethodTypeId="CREDIT_CARD"/>
     <PaymentMethodType description="Gift Card" paymentMethodTypeId="GIFT_CARD"/>
@@ -726,7 +727,15 @@ under the License.
     <!-- Payment Group Type -->
     <PaymentGroupType paymentGroupTypeId="CHECK_RUN" hasTable="N" description="Check Run"/>
     <PaymentGroupType paymentGroupTypeId="BATCH_PAYMENT" hasTable="N" description="Batch of Payments"/>
-    
+
+    <!-- Invoice template screen-->
+    <CustomScreenType customScreenTypeId="CST_INVOICE_TPL" description="Invoice types template"/>
+    <CustomScreenType customScreenTypeId="CST_SALES_INV_TPL" parentTypeId="CST_INVOICE_TPL" description="Sales invoice template"/>
+    <CustomScreen customScreenId="CS_SAL_INV_CONTENT" customScreenTypeId="CST_SALES_INV_TPL" description="Sales invoice From Content"
+                  customScreenName="InvoicePDFFromContent" customScreenLocation="component://accounting/widget/AccountingPrintScreens.xml"/>
+    <CustomScreen customScreenId="CS_SAL_INV_VAT_INC" customScreenTypeId="CST_SALES_INV_TPL" description="Sales invoice Portrait with consolidate VAT"
+                  customScreenName="InvoicePDFWithConsolidateVAT" customScreenLocation="component://accounting/widget/AccountingPrintScreens.xml"/>
+
     <!--  Credit Card methods by type -->
     <CustomMethodType customMethodTypeId="CC_AUTH" hasTable="N" description="Credit Card authorize methods"/>
     <CustomMethodType customMethodTypeId="CC_CAPTURE" hasTable="N" description="Credit Card capture methods"/>

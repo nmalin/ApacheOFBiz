@@ -226,16 +226,16 @@ under the License.
     <fo:table-body font-size="10pt">
 
     <#list vatTaxIds as vatTaxId>
-    <#assign taxRate = delegator.findOne("TaxAuthorityRateProduct", Static["org.apache.ofbiz.base.util.UtilMisc"].toMap("taxAuthorityRateSeqId", vatTaxId), true)/>
+        <#assign vatTaxMap = vatTaxesByType[vatTaxId]>
     <fo:table-row>
         <fo:table-cell>
           <fo:block/>
         </fo:table-cell>
         <fo:table-cell number-columns-spanned="1">
-            <fo:block>${taxRate.description}</fo:block>
+            <fo:block>${vatTaxMap.description}</fo:block>
         </fo:table-cell>
         <fo:table-cell number-columns-spanned="1" text-align="right">
-            <fo:block font-weight="bold"><@ofbizCurrency amount=vatTaxesByType[vatTaxId] isoCode=invoice.currencyUomId!/></fo:block>
+            <fo:block font-weight="bold"><@ofbizCurrency amount=vatTaxMap.amount isoCode=invoice.currencyUomId!/></fo:block>
         </fo:table-cell>
     </fo:table-row>
     </#list>

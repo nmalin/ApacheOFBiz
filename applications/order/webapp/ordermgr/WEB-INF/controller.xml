@@ -501,6 +501,12 @@ under the License.
         <response name="success" type="request" value="additem"/>
         <response name="error" type="request" value="orderentry"/>
     </request-map>
+    <request-map uri="additemmandatoring">
+        <security https="true" auth="true"/>
+        <event type="java" path="org.apache.ofbiz.order.shoppingcart.ShoppingCartEvents" invoke="addToCartLoadMandatoryAssociation"/>
+        <response name="success" type="view" value="showcart"/>
+        <response name="error" type="request" value="orderentry"/>
+    </request-map>
     <request-map uri="addRequirementsToCart">
         <security https="true" auth="true"/>
         <event type="java" path="org.apache.ofbiz.order.shoppingcart.ShoppingCartEvents" invoke="addToCartBulkRequirements"/>

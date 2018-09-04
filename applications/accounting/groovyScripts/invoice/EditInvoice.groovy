@@ -20,6 +20,7 @@
 
 import org.apache.ofbiz.accounting.invoice.InvoiceWorker
 import org.apache.ofbiz.base.util.UtilNumber
+import org.apache.ofbiz.base.util.UtilProperties
 
 import java.text.DateFormat
 
@@ -29,7 +30,7 @@ invoice = from('Invoice').where('invoiceId', invoiceId).queryOne()
 context.invoice = invoice
 
 currency = parameters.currency // allow the display of the invoice in the original currency, the default is to display the invoice in the default currency
-BigDecimal conversionRate = new BigDecimal("1")
+BigDecimal conversionRate = BigDecimal.ONE
 decimals = UtilNumber.getBigDecimalScale("invoice.decimals")
 rounding = UtilNumber.getBigDecimalRoundingMode("invoice.rounding")
 
@@ -45,7 +46,12 @@ if (invoice) {
     if (billingAddress) {
         context.billingAddress = billingAddress
     }
+    sendingAddress = InvoiceWorker.getSendToAddress(invoice)
+    if (sendingAddress) {
+        context.sendingAddress = sendingAddress
+    }
     billToParty = InvoiceWorker.getBillToParty(invoice)
+
     context.billToParty = billToParty
     sendingParty = InvoiceWorker.getSendFromParty(invoice)
     context.sendingParty = sendingParty
@@ -82,11 +88,18 @@ if (invoice) {
             if (taxInfo) {
                 context.sendingPartyTaxId = taxInfo.partyTaxId
             }
-            vatTaxesByTypeAmount = vatTaxesByType[taxRate.taxAuthorityRateSeqId]
+            vatTaxesByTypeAmount = vatTaxesByType[taxRate.taxAuthorityRateSeqId]?.amount
+            vatTaxesByTypeBaseAmount = vatTaxesByType[taxRate.taxAuthorityRateSeqId]?.baseAmount
             if (!vatTaxesByTypeAmount) {
                 vatTaxesByTypeAmount = 0.0
+                vatTaxesByTypeBaseAmount = 0.0
+                vatTaxesByType."${taxRate.taxAuthorityRateSeqId}" = [:]
             }
-            vatTaxesByType.put(taxRate.taxAuthorityRateSeqId, vatTaxesByTypeAmount + invoiceItem.amount)
+            parentInvoiceItem = invoiceItem.getRelatedOne('InvoiceItem', true)
+            vatTaxesByType."${taxRate.taxAuthorityRateSeqId}".amount = vatTaxesByTypeAmount + invoiceItem.amount
+            vatTaxesByType."${taxRate.taxAuthorityRateSeqId}".description = taxRate.description?:"${taxRate.taxPercentage}%"
+            vatTaxesByType."${taxRate.taxAuthorityRateSeqId}".baseAmount = vatTaxesByTypeBaseAmount +
+                    (parentInvoiceItem?InvoiceWorker.getInvoiceItemTotal(parentInvoiceItem):0.0)
         }
     }
     context.vatTaxesByType = vatTaxesByType
@@ -98,6 +111,7 @@ if (invoice) {
     invoiceNoTaxTotal = InvoiceWorker.getInvoiceNoTaxTotal(invoice).multiply(conversionRate).setScale(decimals, rounding)
     context.invoiceTotal = invoiceTotal
     context.invoiceNoTaxTotal = invoiceNoTaxTotal
+    context.invoiceTaxTotal = invoiceTotal.subtract(invoiceNoTaxTotal)
 
                 //*________________this snippet was added for adding Tax ID in invoice header if needed _________________
 

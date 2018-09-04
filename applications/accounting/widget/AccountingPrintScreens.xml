@@ -24,6 +24,7 @@ under the License.
         xmlns="http://ofbiz.apache.org/Widget-Screen" xsi:schemaLocation="http://ofbiz.apache.org/Widget-Screen http://ofbiz.apache.org/dtds/widget-screen.xsd">
 
     <!-- generate a PDF for the invoice. Sharing the same script file as the HTML page for viewing invoice -->
+    
     <screen name="InvoicePDF">
         <section>
             <actions>
@@ -32,8 +33,6 @@ under the License.
                 <property-map resource="PartyUiLabels" map-name="uiLabelMap" global="true"/>
                 <property-map resource="OrderUiLabels" map-name="uiLabelMap" global="true"/>
                 <property-map resource="CommonUiLabels" map-name="uiLabelMap" global="true"/>
-                <set field="titleProperty" value="AccountingInvoice"/>
-                <script location="component://accounting/groovyScripts/invoice/EditInvoice.groovy"/>
                 <script location="component://party/groovyScripts/party/GetMyCompany.groovy"/>
             </actions>
             <widgets>
@@ -49,6 +48,33 @@ under the License.
                             <if-compare field="invoice.partyId" operator="equals" value="${myCompanyId}"/>
                         </or>
                     </condition>
+                    <actions>
+                        <script location="component://accounting/groovyScripts/invoice/GetInvoiceTemplateScreen.groovy"/>
+                    </actions>
+                    <widgets>
+                        <include-screen name="${screenName}" location="${screenLocation}"/>
+                    </widgets>
+                    <fail-widgets>
+                        <decorator-screen name="FoReportDecorator" location="component://common/widget/CommonScreens.xml">
+                            <decorator-section name="body">
+                                <platform-specific>
+                                    <xsl-fo><html-template location="component://accounting/template/invoice/NoAccountingView.fo.ftl"/></xsl-fo>
+                                </platform-specific>
+                            </decorator-section>
+                        </decorator-screen>
+                    </fail-widgets>
+                </section>
+            </widgets>
+        </section>
+    </screen>
+    <screen name="DefaultInvoicePDF2">
+        <section>
+            <actions>
+                <set field="titleProperty" value="AccountingInvoice"/>
+                <script location="component://accounting/groovyScripts/invoice/EditInvoice.groovy"/>
+            </actions>
+            <widgets>
+                <section>
                     <widgets>
                         <decorator-screen name="FoReportDecorator" location="component://common/widget/CommonScreens.xml">
                             <decorator-section name="topLeft">
@@ -68,6 +94,83 @@ under the License.
                                </platform-specific>
                             </decorator-section>
                         </decorator-screen>
+                    </widgets>
+                </section>
+            </widgets>
+        </section>
+    </screen>
+    <screen name="InvoicePDFBlockDecorator">
+        <section>
+            <widgets>
+                <platform-specific><xsl-fo><html-template location="component://accounting/template/invoice/block/InvoiceReportMain.fo.ftl"/></xsl-fo></platform-specific>
+            </widgets>
+        </section>
+    </screen>
+    <screen name="InvoicePDFWithConsolidateVAT">
+        <section>
+            <actions>
+                <set field-name="templateColor" value="green" global="true"/>
+                <script location="component://accounting/groovyScripts/invoice/EditInvoice.groovy"/>
+            </actions>
+            <widgets>
+                <decorator-screen name="InvoicePDFBlockDecorator">
+                    <decorator-section name="topColumn1">
+                        <include-screen name="CompanyLogo" location="component://order/widget/ordermgr/OrderPrintScreens.xml"/>
+                    </decorator-section>
+                    <decorator-section name="topColumn2">
+                        <platform-specific>
+                            <xsl-fo><html-template location="component://accounting/template/invoice/block/InvoiceReportHeaderInfo.fo.ftl"/></xsl-fo>
+                        </platform-specific>
+                    </decorator-section>
+                    <decorator-section name="shipping">
+                        <platform-specific>
+                            <xsl-fo><html-template location="component://accounting/template/invoice/block/InvoiceReportShipping.fo.ftl"/></xsl-fo>
+                        </platform-specific>
+                    </decorator-section>
+                    <decorator-section name="billing">
+                        <platform-specific>
+                            <xsl-fo><html-template location="component://accounting/template/invoice/block/InvoiceReportBilling.fo.ftl"/></xsl-fo>
+                        </platform-specific>
+                    </decorator-section>
+                    <decorator-section name="headerBottom">
+                        <platform-specific>
+                            <xsl-fo><html-template location="component://accounting/template/invoice/block/InvoiceReportOrderInfo.fo.ftl"/></xsl-fo>
+                        </platform-specific>
+                    </decorator-section>
+                    <decorator-section name="body">
+                        <platform-specific>
+                            <xsl-fo><html-template location="component://accounting/template/invoice/block/InvoiceReportItems.fo.ftl"/></xsl-fo>
+                        </platform-specific>
+                        <platform-specific>
+                            <xsl-fo><html-template location="component://accounting/template/invoice/block/InvoiceReportTotals.fo.ftl"/></xsl-fo>
+                        </platform-specific>
+                    </decorator-section>
+                    <decorator-section name="footer">
+                        <platform-specific>
+                            <xsl-fo><html-template location="component://accounting/template/invoice/block/InvoiceReportLegalNotices.fo.ftl"/></xsl-fo>
+                        </platform-specific>
+                    </decorator-section>
+                </decorator-screen>
+            </widgets>
+        </section>
+    </screen>
+    <screen name="InvoicePDFFromContent">
+        <section>
+            <actions>
+                <set field="titleProperty" value="AccountingInvoice"/>
+                <script location="component://accounting/groovyScripts/invoice/EditInvoice.groovy"/>
+                <entity-condition entity-name="PartyContentAndPurpose" list="invoiceTemplatePartyContent">
+                    <condition-list>
+                        <condition-expr field-name="partyId" from-field="orgPartyId"/>
+                        <condition-expr field-name="partyContentTypeId" value="${invoice.invoiceTypeId}_TPL"/>
+                    </condition-list>
+                </entity-condition>
+            </actions>
+            <widgets>
+                <section>
+                    <condition><not><if-empty field="invoiceTemplatePartyContent"/></not></condition>
+                    <widgets>
+                        <content content-id="${invoiceTemplateContentId}"/>
                     </widgets>
                     <fail-widgets>
                         <decorator-screen name="FoReportDecorator" location="component://common/widget/CommonScreens.xml">
