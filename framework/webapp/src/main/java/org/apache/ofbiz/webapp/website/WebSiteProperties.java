@@ -154,10 +154,7 @@ public final class WebSiteProperties {
             httpsPortValue += Start.getInstance().getConfig().portOffset; // Here unlike above we trust the user and don't rely on the request, no dontAddPortoffset.
             httpsPort = httpsPortValue.toString();
         }
-<<<<<<< HEAD
-        
-=======
->>>>>>> add webapp path option
+
         return new WebSiteProperties(httpPort, httpHost, httpsPort, httpsHost, webappPath, enableHttps);
     }
 
