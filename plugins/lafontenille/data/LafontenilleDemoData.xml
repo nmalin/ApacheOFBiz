@@ -222,6 +222,7 @@ under the License.
 
 
 
+    <!--Ajout ecran d'impression de facturation-->
     <CustomScreenType customScreenTypeId="CST_INVOICE_TPL" description="Invoice types template"/>
     <CustomScreenType customScreenTypeId="CST_SALES_INV_TPL" parentTypeId="CST_INVOICE_TPL" description="Sales invoice template"/>
     <CustomScreen customScreenId="CS_SAL_INV_CONTENT" customScreenTypeId="CST_SALES_INV_TPL" description="Sales invoice From Content"
