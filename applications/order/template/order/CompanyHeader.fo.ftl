@@ -19,7 +19,7 @@ under the License.
 <#escape x as x?xml>
 
 <fo:block text-align="left">
-    <#if logoImageUrl?has_content><fo:external-graphic src="<@ofbizContentUrl>${logoImageUrl}</@ofbizContentUrl>" overflow="hidden" height="40px" content-height="scale-to-fit" content-width="2.00in"/></#if>
+    <#if logoImageUrl?has_content><fo:external-graphic src="<@ofbizContentUrl>${logoImageUrl}</@ofbizContentUrl>" overflow="visible" height="270px" content-height="scale-to-fit" content-width="2.00in" scaling="non-uniform"/></#if>
 </fo:block>
 
 <fo:block font-size="8pt">

@@ -149,10 +149,10 @@ under the License.
                             <fo:table-cell text-align="right">
                                 <fo:block> <#if invoiceItem.quantity??><@ofbizCurrency amount=invoiceItem.amount! isoCode=invoice.currencyUomId!/></#if> </fo:block>
                             </fo:table-cell>
-                            <#assign lineTaxTotalAmount = Static["org.apache.ofbiz.accounting.invoice.InvoiceWorker"].getInvoiceItemTaxTotal(invoiceItem)>
+                            <#assign lineTaxTotalAmount = Static["org.apache.ofbiz.accounting.invoice.InvoiceWorker"].getInvoiceItemTotal(invoiceItem)>
                             <#if !lineTaxTotalAmount??><#assign lineTaxTotalAmount=Static["java.math.BigDecimal"].ZERO></#if>
                             <fo:table-cell text-align="right">
-                                <fo:block> <@ofbizCurrency amount=(Static["org.apache.ofbiz.accounting.invoice.InvoiceWorker"].getInvoiceItemTaxTotal(invoiceItem)) isoCode=invoice.currencyUomId!/> </fo:block>
+                                <fo:block> <@ofbizCurrency amount=lineTaxTotalAmount isoCode=invoice.currencyUomId!/> </fo:block>
                             </fo:table-cell>
                             <#assign lineTotalAmount = Static["org.apache.ofbiz.accounting.invoice.InvoiceWorker"].getInvoiceItemTotal(invoiceItem).add(lineTaxTotalAmount)/>
                             <fo:table-cell text-align="right">

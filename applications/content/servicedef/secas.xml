@@ -126,7 +126,7 @@ under the License.
     <eca service="createContent" event="commit">
         <condition field-name="partyId" operator="is-empty"/>
         <condition field-name="roleTypeId" operator="is-empty"/>
-        <condition field-name="userLogin" operator="is-not-empty"/>
+        <condition field-name="userLogin.partyId" operator="is-not-empty"/>
         <set field-name="partyId" env-name="${userLogin.partyId}"/>
         <set field-name="roleTypeId" value="OWNER"/>
         <action service="createContentRole" mode="sync" run-as-user="system"/>

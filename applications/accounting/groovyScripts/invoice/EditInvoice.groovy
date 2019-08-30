@@ -46,7 +46,7 @@ if (invoice) {
     if (billingAddress) {
         context.billingAddress = billingAddress
     }
-    sendingAddress = InvoiceWorker.getSendToAddress(invoice)
+    sendingAddress = null
     if (sendingAddress) {
         context.sendingAddress = sendingAddress
     }

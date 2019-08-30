@@ -34,5 +34,63 @@ under the License.
             </widgets>
         </section>
     </screen>
+    <screen name="ChambreHoteInvoicePDF">
+        <section>
+            <actions>
+                <set field-name="templateColor" value="green" global="true"/>
+                <script location="component://accounting/groovyScripts/invoice/EditInvoice.groovy"/>
+            </actions>
+            <widgets>
+                <decorator-screen name="InvoicePDFBlockDecorator">
+                    <decorator-section name="topColumn1">
+                        <include-screen name="CompanyLogo"/>
+                    </decorator-section>
+                    <decorator-section name="topColumn2">
+                        <platform-specific>
+                            <xsl-fo><html-template location="component://lafontenille/template/invoice/InvoiceReportHeaderInfo.fo.ftl"/></xsl-fo>
+                        </platform-specific>
+                    </decorator-section>
+                    <decorator-section name="shipping">
+                        <platform-specific>
+                            <xsl-fo><html-template location="component://accounting/template/invoice/InvoiceReportShipping.fo.ftl"/></xsl-fo>
+                        </platform-specific>
+                    </decorator-section>
+                    <decorator-section name="billing">
+                        <platform-specific>
+                            <xsl-fo><html-template location="component://accounting/template/invoice/InvoiceReportBilling.fo.ftl"/></xsl-fo>
+                        </platform-specific>
+                    </decorator-section>
+                    <decorator-section name="headerBottom">
+                        <platform-specific>
+                            <xsl-fo><html-template location="component://accounting/template/invoice/InvoiceReportOrderInfo.fo.ftl"/></xsl-fo>
+                        </platform-specific>
+                    </decorator-section>
+                    <decorator-section name="body">
+                        <platform-specific>
+                            <xsl-fo><html-template location="component://accounting/template/invoice/InvoiceReportItems.fo.ftl"/></xsl-fo>
+                        </platform-specific>
+                        <platform-specific>
+                            <xsl-fo><html-template location="component://accounting/template/invoice/InvoiceReportTotals.fo.ftl"/></xsl-fo>
+                        </platform-specific>
+                    </decorator-section>
+                    <decorator-section name="footer">
+                        <platform-specific>
+                            <xsl-fo><html-template location="component://accounting/template/invoice/InvoiceReportLegalNotices.fo.ftl"/></xsl-fo>
+                        </platform-specific>
+                    </decorator-section>
+                </decorator-screen>
+            </widgets>
+        </section>
+    </screen>
+    <screen name="CompanyLogo">
+        <section>
+            <actions>
+                <script location="component://order/groovyScripts/order/CompanyHeader.groovy"/>
+            </actions>
+            <widgets>
+                <platform-specific><xsl-fo><html-template location="component://lafontenille/template/"/></xsl-fo></platform-specific>
+            </widgets>
+        </section>
+    </screen>
 
 </screens>
